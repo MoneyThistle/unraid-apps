@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<CommunityApplications>
+  <Profile>
+Unraid Community Applications templates for the Thistle projects, maintained by Mike (ItsMNLOP).
+
+**MoneyThistle** - a self-hosted household money manager that runs in your browser. Accounts and registers, Bills &amp; Deposits, paychecks and paystubs, budgets, reports and a year-end tax report, and automatic backups to a folder and to Nextcloud / WebDAV. Scheduled bills and deposits can average their amount from their recent history, and that feeds a day-by-day balance forecast. No bank connections: you type things in or import the files your bank, Quicken, Microsoft Money, YNAB, GnuCash, Actual, Mint or Firefly III give you. Multiple people can sign in, and separate environments (Personal, Business, and so on) can share accounts. English, French, Spanish and Portuguese.
+
+MoneyThistle is free and open source (AGPL-3.0). Keep it on your home network or reach it over Tailscale or another private VPN: it is not built to be open to the public internet.
+
+Project site: https://money.thistle.casa
+Source and issues: https://github.com/MoneyThistle/MoneyThistle
+  </Profile>
+  <Icon>https://raw.githubusercontent.com/MoneyThistle/unraid-apps/main/icon.png</Icon>
+  <WebPage>https://github.com/MoneyThistle/unraid-apps</WebPage>
+  <DonateLink>https://buymeacoffee.com/ItsMNLOP</DonateLink>
+  <DonateText>MoneyThistle is free and open source. If it helps, you can buy me a coffee.</DonateText>
+</CommunityApplications>
