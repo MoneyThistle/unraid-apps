@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>MoneyThistle</Name>
+  <Repository>ghcr.io/moneythistle/moneythistle:latest</Repository>
+  <Registry>https://github.com/MoneyThistle/MoneyThistle/pkgs/container/moneythistle</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/MoneyThistle/MoneyThistle/issues</Support>
+  <Project>https://github.com/MoneyThistle/MoneyThistle</Project>
+  <Overview>MoneyThistle: a simple personal money manager for a household, opened in your browser. Accounts and registers, Bills &amp; Deposits, paychecks and paystubs, budgets, reports and a year-end tax report, and automatic backups to a folder and to Nextcloud / WebDAV. No bank connections. English, French, Spanish and Portuguese.&#xD;
+&#xD;
+After Apply, open the WebUI: the first visit creates the administrator's sign-in. Everything else (people, Nextcloud backups, notifications, language) is set up in the app.&#xD;
+&#xD;
+Updates: with the Repository ending in :latest, the Docker tab shows "update ready" for each new release. To stay on one version, change :latest to a version number, like :1.0.3.&#xD;
+&#xD;
+Keep it on your home network or Tailscale: never open it to the public internet.</Overview>
+  <Category>Productivity: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/MoneyThistle/unraid-apps/main/templates/moneythistle.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/MoneyThistle/unraid-apps/main/icon.png</Icon>
+  <ExtraParams>--stop-timeout 60</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText>MoneyThistle is free and open source. If it helps, you can buy me a coffee.</DonateText>
+  <DonateLink>https://buymeacoffee.com/ItsMNLOP</DonateLink>
+  <Requires/>
+  <Config Name="Web UI port" Target="8080" Default="8080" Mode="tcp" Description="Port for the web page (http://SERVER:PORT, also over Tailscale)." Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="Money data" Target="/data" Default="/mnt/user/appdata/moneythistle/data" Mode="rw" Description="Your money file and settings. To pick another folder: empty this box first, then click it (Unraid's folder browser can't open a folder that doesn't exist yet; it's made on Apply)." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/moneythistle/data</Config>
+  <Config Name="Backups folder" Target="/backups" Default="/mnt/user/appdata/moneythistle/backups" Mode="rw" Description="Local backup copies (can be a share, e.g. /mnt/user/backups/moneythistle). To pick another folder: empty this box first, then click it (Unraid's folder browser can't open a folder that doesn't exist yet; it's made on Apply)." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/moneythistle/backups</Config>
+  <Config Name="Time zone" Target="TZ" Default="America/New_York" Mode="" Description="Used for 'today' (bills due, budget month). A name like America/Chicago or Europe/Berlin." Type="Variable" Display="always" Required="true" Mask="false">America/New_York</Config>
+</Container>
